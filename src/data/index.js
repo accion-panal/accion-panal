@@ -106,7 +106,7 @@ export const servicesData = [
     id: 3,
     title: 'Desarrollo Web',
     subtitle: 'Páginas Web',
-    desc: 'Desarrollo y diseño de sitios web responsives para corredores inmobiliarios, con la que podrás sincronizar tus publicaciones con nuestro integrador y hacer crecer tu marca.',
+    desc: 'Desarrollo y diseño de sitios web responsivos para corredores inmobiliarios, con la que podrás sincronizar tus publicaciones con nuestro integrador y hacer crecer tu marca.',
     href: '#paginas-web-section',
     src: 'https://res.cloudinary.com/dvdb33uyj/image/upload/v1684360057/Projects/accion-panal/img/about/png/image2png_eyn9nw.png',
   },
@@ -228,19 +228,19 @@ export const KanjeCard = [
   {
     id: 1,
     title: 'SISTEMA INTELIGENTE',
-    desc: 'Nuestro sistema te ayudara a conseguir de manera sencilla y eficaz la propiedad con las características adecuadas o al cliente interesado',
+    desc: 'Nuestro sistema te ayudará a conseguir de manera sencilla y eficaz la propiedad con las características adecuadas o al cliente interesado.',
     icon: <GiArtificialIntelligence />,
   },
   {
     id: 2,
     title: 'SEGURIDAD',
-    desc: 'Contamos con un sistema que te brinda seguridad y transparencia en el proceso de canje',
+    desc: 'Contamos con un sistema que te brinda seguridad y transparencia en el proceso de canje.',
     icon: <MdSecurity />,
   },
   {
     id: 3,
     title: 'MAS INGRESOS',
-    desc: 'Amplia tu cartera de propiedades captando nuevos y potenciales clientes y cierra la operaciones lo mas pronto posible.',
+    desc: 'Amplía tu cartera de propiedades captando nuevos y potenciales clientes y cierra las operaciones lo más pronto posible.',
     icon: <GiReceiveMoney />,
   },
 ];

@@ -34,7 +34,7 @@ function HeadWeb() {
                         PÁGINAS WEB INMOBILIARIAS
                     </h2>
                     <span className="my-10 text-md xl:text-xl items-center justify-center text-gray-800">
-                        Impulsa tu negocio inmobiliario, aumentando la presencia en internet con tu pagina web personalizada
+                        Impulsa tu negocio inmobiliario, aumentando la presencia en internet con tu página web personalizada.
                     </span>
                     <Link to="FormWeb" spy={true} smooth={true} offset={-130} duration={1000}>
                         <div className="my-10">

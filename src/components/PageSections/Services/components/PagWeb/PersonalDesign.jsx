@@ -37,7 +37,7 @@ function PersonalDesign() {
                                 </div>
                                 <div className="px-6 py-10 flex ">
                                     <div className="ml-6 px-4">
-                                        <p className="text-gray-700 text-3xl whitespace-pre-line">Únete con nosotros a la era digital impulsa tu marca inmobiliaria con tu sitio web personalizado.
+                                        <p className="text-gray-700 text-3xl whitespace-pre-line">Únete con nosotros a la era digital, impulsa tu marca inmobiliaria con tu sitio web personalizado.
                                             Combina tus colores favoritos y transmite a tu público objetivo el significado de tu empresa.</p>
                                     </div>
                                 </div>

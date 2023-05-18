@@ -74,7 +74,7 @@ const WhyWe = () => {
                                     </div>
                                     <div className="ml-6 px-4 py-4">
                                         <p className="text-gray-700 whitespace-pre-line">Te ofrecemos una experiencia al usuario única,
-                                            ya que contamos con una interfaz intuitiva y fácil de usar paraque no pierdas tiempo publicando.</p>
+                                            ya que contamos con una interfaz intuitiva y fácil de usar para que no pierdas tiempo publicando.</p>
                                     </div>
                                 </div>
 
@@ -85,8 +85,8 @@ const WhyWe = () => {
                                         </div>
                                     </div>
                                     <div className="ml-6 px-4 py-4">
-                                        <p className="text-gray-700 whitespace-pre-line">Contaras con un usuario para que puedas ingresar a nuestra plataforma
-                                            y un Vendeid que permitirá el contacto directo entre los clientes potenciales y tu.</p>
+                                        <p className="text-gray-700 whitespace-pre-line">Contarás con un usuario para que puedas ingresar a nuestra plataforma
+                                            Y un vendedor que permitirá el contacto directo entre los clientes potenciales y tú.</p>
                                     </div>
                                 </div>
 
@@ -118,8 +118,7 @@ const WhyWe = () => {
                                         </div>
                                     </div>
                                     <div className="ml-6 px-4 py-4">
-                                        <p className="text-gray-700 whitespace-pre-line">Automatiza tus tareas y mejora tu rendimiento para
-                                            poder dedicar mas tiempo al cierre de negocios.</p>
+                                        <p className="text-gray-700 whitespace-pre-line">Automatiza tus tareas y mejora tu rendimiento para poder dedicar más tiempo al cierre de negocios.</p>
                                     </div>
                                 </div>
 
@@ -143,8 +142,8 @@ const WhyWe = () => {
                                         </div>
                                     </div>
                                     <div className="ml-6 px-4 py-4">
-                                        <p className="text-gray-700 whitespace-pre-line">Aumenta tu cartera y las consultas de clientes potenciales con nuestro Software inmobiliario desarrollado con inteligencia artificial y análisis de datos,
-                                            para conseguir clientes similares a los de tu publicación.</p>
+                                        <p className="text-gray-700 whitespace-pre-line">Aumenta tu cartera y las consultas de clientes potenciales con nuestro software inmobiliario desarrollado
+                                            con inteligencia artificial y análisis de datos, para conseguir clientes similares a los de tu publicación.</p>
                                     </div>
                                 </div>
 

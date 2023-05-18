@@ -31,14 +31,14 @@ function HeadKanje() {
                         SISTEMA AVANZADO DE CANJE
                     </p>
                     <h2 className='text-panal-cyan text-2xl xl:text-5xl uppercase my-10'>
-                        YO KANJEO
+                        YO CANJEO
                     </h2>
                     <span className="my-10 text-md xl:text-xl items-center justify-center text-gray-800">
                         Búsqueda inteligente para conseguir la propiedad adecuada o al cliente interesado en comprar y arrendar
                     </span>
                     <Link to="FormCanje" spy={true} smooth={true} offset={-130} duration={1000}>
                         <div className="my-10">
-                            <Button>CONOCE MÁS DE YO KANJEO</Button>
+                            <Button>CONOCE MÁS DE YO CANJEO</Button>
                         </div>
                     </Link>
                 </div>

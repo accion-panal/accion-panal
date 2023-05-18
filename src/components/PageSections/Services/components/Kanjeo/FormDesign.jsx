@@ -203,8 +203,8 @@ const FormDesign = () => {
             htmlFor="termsy"
             className="ml-2 text-sm font-light text-gray-500"
           >
-            Al continuar estas aceptando los términos y condiciones y la
-            politica de privacidad
+            Al continuar estás aceptando los términos y condiciones y las
+            políticas de privacidad
           </label>
         </div>
 
