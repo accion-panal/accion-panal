@@ -36,11 +36,10 @@ function HeadKanje() {
                     <span className="my-10 text-md xl:text-xl items-center justify-center text-gray-800">
                         Búsqueda inteligente para conseguir la propiedad adecuada o al cliente interesado en comprar y arrendar
                     </span>
-                    <Link to="FormCanje" spy={true} smooth={true} offset={-130} duration={1000}>
-                        <div className="my-10">
-                            <Button>CONOCE MÁS DE YO KANJEO</Button>
-                        </div>
-                    </Link>
+                    <div className="my-10">
+                        <Button href='https://yokanjeo.cl/' targetBlank>CONOCE MÁS DE YO KANJEO</Button>
+                    </div>
+
                 </div>
             </Reveal>
             <div>
