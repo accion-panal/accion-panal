@@ -37,7 +37,7 @@ function HeadKanje() {
                         Búsqueda inteligente para conseguir la propiedad adecuada o al cliente interesado en comprar y arrendar
                     </span>
                     <div className="my-10">
-                        <Button href='https://yokanjeo.cl/' targetBlank>CONOCE MÁS DE YO KANJEO</Button>
+                        <Button href='https://yocanjeo.cl/' targetBlank>CONOCE MÁS DE YO KANJEO</Button>
                     </div>
 
                 </div>
