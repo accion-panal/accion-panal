@@ -6,7 +6,7 @@ import AccionPanalLogo from '../../assets/img/logo/accion-panal-logo.webp';
 import { iconsList } from '../icons';
 
 const Footer = () => {
-  const { BsFacebook, BsLinkedin, BsInstagram } = iconsList;
+  const { BsFacebook, BsYoutube, BsInstagram } = iconsList;
 
   const iconColor = '#4e2772';
 
@@ -56,6 +56,18 @@ const Footer = () => {
                 para saber mas sobre nuestros terminos y condiciones.
               </p>
             </div>
+          </div>
+          <h3 className="text-panal-purple text-xl my-3">Síguenos en:</h3>
+          <div className="flex gap-4 justify-around">
+            <a href='' target='_blank' className=" hover:scale-105">
+              <BsFacebook size="2rem" color={iconColor} />
+            </a>
+            <a href='https://www.instagram.com/accionpanal/' target='_blank' className="hover:scale-105">
+              <BsInstagram size="2rem" color={iconColor} />
+            </a>
+            <a href='https://www.youtube.com/@AccionPanal' target='_blank' className="hover:scale-105">
+              <BsYoutube size="2rem" color={iconColor} />
+            </a>
           </div>
         </div>
 
