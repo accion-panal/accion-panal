@@ -103,7 +103,7 @@ const RequestDemoForm = ({
         state.user?.phone,
         optionDomain === '1' ? 'Si posee' : 'No posee',
         domainName || domain2Name,
-        realtorData?.email,
+        realtorData.email,
         `${selectedDemo || ''} - ${selectedAdvancedDemo || ''} - ${selectedLandingDemo || ''
         }`
       );

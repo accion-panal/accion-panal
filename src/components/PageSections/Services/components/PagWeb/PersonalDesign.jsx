@@ -26,7 +26,7 @@ function PersonalDesign() {
                     <div className='grid gap-8 max-w-[1400px]'>
                         <div className='flex justify-center items-center gap-8 flex-wrap'>
                             <div className='flex flex-auto items-center justify-center order-2 md:order-1'>
-                                <Image src="https://res.cloudinary.com/dvdb33uyj/image/upload/v1684163966/Projects/accion-panal/img/services/png/dise%C3%B1o_lowlok.png" alt="Displays" width="600" height="700" />
+                                <Image src="https://res.cloudinary.com/dvdb33uyj/image/upload/v1691704256/Projects/accion-panal/img/services/png/illustracionAccionPanal.png" alt="Displays" width="500" height="500" />
                             </div>
 
                             <div className="xl:w-[50%] w-full mx-4 bg-white shadow-2xl rounded-3xl overflow-hidden hover:scale-105 transition duration-500 order-1 md:order-2">

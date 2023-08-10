@@ -9,6 +9,8 @@ const ContactFormServices = {
         Telefono: phone,
         Correo: userEmail,
         Codigo: uniqueCode,
+        '_template':'table',
+        '_subject': 'De: Acción Panal'
       },
       {
         headers: {
@@ -33,6 +35,7 @@ const ContactFormServices = {
       hasDomain === 'Si posee'
         ? 'Nombre_del_Dominio'
         : 'Nombre_del_dominio_a_buscar';
+        
 
     const response = await axios.post(
       `https://formsubmit.co/ajax/${realtorEmail}`,
@@ -62,6 +65,8 @@ const ContactFormServices = {
         Nombre: name,
         Correo: userEmail,
         Telefono: phone,
+        '_template':'table',
+        '_subject': 'De: Acción Panal'      
       },
       {
         headers: {
