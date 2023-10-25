@@ -1,5 +1,5 @@
 export const realtorData = {
-  email: 'josefinadelalamo@accionpanal.com',
+  email: 'fabians@accionpanal.com',
 };
 
 export const contactAccionPanalData = {
