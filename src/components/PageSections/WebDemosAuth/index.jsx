@@ -42,8 +42,8 @@ const WebDemosAuth = () => {
           setSelectedDemo,
           selectedAdvancedDemo,
           demos: demosBasicData,
-          title: 'Web DEMOS - Páginas básicas',
-          subtitle: 'Elige y Cotiza tu Web Básica',
+          title: 'Web DEMOS - Páginas estandar',
+          subtitle: 'Elige y cotiza tu web estandar',
         }}
       />
 
@@ -71,7 +71,7 @@ const WebDemosAuth = () => {
           setSelectedLandingDemo,
           demos: demosAdvancedData,
           title: 'Web DEMOS - Páginas avanzadas',
-          subtitle: 'Elige y Cotiza tu Web Avanzada',
+          subtitle: 'Elige y cotiza tu web avanzada',
         }}
       />
 
