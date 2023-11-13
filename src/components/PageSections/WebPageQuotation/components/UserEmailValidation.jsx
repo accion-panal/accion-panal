@@ -158,14 +158,23 @@ const UserEmailValidation = () => {
             <Button onClick={onValidateClick}>Validar código</Button>
           </div>
         )}
-
+{/* 
         {sendRequestBtn && (
           <div className="flex items-center justify-center">
             <Button type="submit" className="flex items-center justify-center">
               Ver Demos
             </Button>
           </div>
-        )}
+          
+        )} */}
+
+{sendRequestBtn && (
+          <div className="flex items-center justify-center">
+            <Button type="submit" className="flex items-center justify-center">
+              Ver Demos
+            </Button>
+          </div>)}
+          
       </form>
     </div>
   );

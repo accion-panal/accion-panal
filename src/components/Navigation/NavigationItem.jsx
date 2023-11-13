@@ -41,6 +41,7 @@ const NavigationItem = ({ menuItem }) => {
                       <div className="ml-3">
                         <p className="text-sm py-2 font-normal">{name}</p>
                       </div>
+                      
                     </Link>
                   ))}
                 </div>
@@ -53,7 +54,7 @@ const NavigationItem = ({ menuItem }) => {
   ) : (
     <Link
       href={href}
-      target={href === 'http://190.114.255.247:195' ? '_blank' : ''}
+      target={href === 'https://accion.panal.house/' ? '_blank' : ''}
       className={`${route === href
           ? 'bg-transparent border-b-2 border-amber-500 text-black inline-flex items-center text-sm xl:text-base font-normal py-2 px-4 xl:px-5'
           : 'inline-flex items-center text-sm xl:text-base font-normal py-2 px-4 xl:px-5 text-slate-800 hover:bg-slate-100 hover:text-slate-900'
