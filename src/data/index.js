@@ -46,6 +46,11 @@ export const navigationData = [
         name: 'Página web',
         href: '/servicios/paginaWeb',
       },
+      {
+        id:4,
+        name:"Demos páginas web",
+        href:'/web-demos'
+      }
     ],
   },
   {
@@ -56,7 +61,7 @@ export const navigationData = [
   {
     id: 5,
     name: 'Intranet',
-    href: 'http://190.114.255.247:195',
+    href: 'https://accion.panal.house/',
   },
 ];
 

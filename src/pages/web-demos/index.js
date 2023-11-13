@@ -17,7 +17,9 @@ const WebDemos = () => {
       </HeadPage>
 
       <LayoutPage>
-        {state?.authUser?.length > 0 ? (
+      <WebDemosAuth />
+
+        {/* {state?.authUser?.length > 0 ? (
           <WebDemosAuth />
         ) : (
           <Section>
@@ -41,7 +43,7 @@ const WebDemos = () => {
               </div>
             </div>
           </Section>
-        )}
+        )} */}
       </LayoutPage>
     </>
   );
