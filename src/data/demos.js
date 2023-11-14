@@ -3,37 +3,37 @@ export const demosBasicData = [
     id: 1,
     name: 'DEMO PÁGINA B-1',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683658407/accion-panal/demos/wb-1_hha5o0.png',
-    href: 'https://pagina-web-b1.partnersadvisers.info/',
+    href: 'https://demo-page-standar-1.pages.dev/',
   },
   {
     id: 2,
     name: 'DEMO PÁGINA B-2',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683658408/accion-panal/demos/wb-2_gqxbdl.png',
-    href: 'https://pagina-web-b2.partnersadvisers.info/',
+    href: 'https://demo-page-standard-2.pages.dev/',
   },
   {
     id: 3,
     name: 'DEMO PÁGINA B-3',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683658407/accion-panal/demos/wb-3_om0eqp.png',
-    href: 'https://pagina-web-b3.partnersadvisers.info/',
+    href: 'https://demo-page-standard-3.pages.dev/',
   },
   {
     id: 4,
     name: 'DEMO PÁGINA B-4',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683658407/accion-panal/demos/wb-4_kozswv.png',
-    href: 'https://pagina-web-b4.partnersadvisers.info/',
+    href: 'https://demo-page-standard-4.pages.dev/',
   },
   {
     id: 5,
     name: 'DEMO PÁGINA B-5',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683658407/accion-panal/demos/wb-5_t0cmez.png',
-    href: 'https://pagina-web-b5.partnersadvisers.info/',
+    href: 'https://demo-page-standard-5.pages.dev/',
   },
   {
     id: 6,
     name: 'DEMO PÁGINA B-6',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683658528/accion-panal/demos/wp-6_o0gehe.png',
-    href: 'https://pagina-web-b6.partnersadvisers.info/',
+    href: 'https://demo-page-standard-6.pages.dev/',
   },
 ];
 
