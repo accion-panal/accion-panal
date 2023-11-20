@@ -42,19 +42,19 @@ export const demosAdvancedData = [
     id: 1,
     name: 'DEMO PÁGINA A-1',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683665770/accion-panal/demos/wa-1_omhece.png',
-    href: 'https://pagina-web-a1.partnersadvisers.info/',
+    href: 'https://demo-avanzada-1.unne.cl/',
   },
   {
     id: 2,
     name: 'DEMO PÁGINA A-2',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683665833/accion-panal/demos/wa-2_qezs07.png',
-    href: 'https://pagina-web-a2.partnersadvisers.info/',
+    href: 'https://demo-avanzada-2.unne.cl/',
   },
   {
     id: 3,
     name: 'DEMO PÁGINA A-3',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683665874/accion-panal/demos/wa-3_adpjkr.png',
-    href: 'https://pagina-web-a3.partnersadvisers.info/',
+    href: 'https://demo-avanzada-3.unne.cl/',
   },
 ];
 
