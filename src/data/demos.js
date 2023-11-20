@@ -63,18 +63,18 @@ export const demosLandingsData = [
     id: 1,
     name: 'DEMO LANDING PAGE 1',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683681870/accion-panal/demos/land-1_tbqjuq.png',
-    href: 'https://landing-1.partnersadvisers.info/',
+    href: 'https://demo-landing-1.unne.cl/',
   },
   {
     id: 2,
     name: 'DEMO LANDING PAGE 2',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683681933/accion-panal/demos/land-2_ncznj5.png',
-    href: 'https://landing-2.partnersadvisers.info/',
+    href: 'https://demo-landing-2.unne.cl/',
   },
   {
     id: 3,
     name: 'DEMO LANDING PAGE 3',
     src: 'https://res.cloudinary.com/dbrhjc4o5/image/upload/v1683681987/accion-panal/demos/land-3_yf7yg2.png',
-    href: 'https://landing-3.partnersadvisers.info/',
+    href: 'https://demo-landing-3.unne.cl/',
   },
 ];
