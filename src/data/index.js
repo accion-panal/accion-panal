@@ -47,19 +47,24 @@ export const navigationData = [
         href: '/servicios/paginaWeb',
       },
       {
-        id:4,
-        name:"Demos páginas web",
-        href:'/web-demos'
-      }
+        id: 4,
+        name: 'Demos páginas web',
+        href: '/web-demos',
+      },
     ],
   },
+  // {
+  //   id: 4,
+  //   name: 'Propiedades',
+  //   href: '/propiedades',
+  // },
   {
-    id: 4,
+    id: 5,
     name: 'Contacto',
     href: '/contacto',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Intranet',
     href: 'https://accion.panal.house/',
   },
