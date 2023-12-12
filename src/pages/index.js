@@ -3,7 +3,6 @@ import HeadPage from '@/components/HeadPage/HeadPage';
 import LayoutPage from '@/components/LayoutPage/LayoutPage';
 import HomeComponent from '@/components/PageSections/Home/index.jsx';
 
-
 const Home = () => (
   <>
     <HeadPage>
@@ -12,7 +11,6 @@ const Home = () => (
 
     <LayoutPage>
       <HomeComponent />
-
     </LayoutPage>
   </>
 );
