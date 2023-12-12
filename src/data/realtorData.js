@@ -1,5 +1,5 @@
 export const realtorData = {
-  email: 'fabians@accionpanal.com',
+  email: 'contacto@accionpanal.com',
 };
 
 export const contactAccionPanalData = {

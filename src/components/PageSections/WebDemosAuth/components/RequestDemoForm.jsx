@@ -6,6 +6,7 @@ import Button from '@/components/Button/Button';
 import { iconsList } from '@/components/icons';
 import { realtorData } from '@/data/realtorData';
 import { userDomainData } from '@/data';
+import { MdFormatColorFill } from 'react-icons/md';
 
 const RequestDemoForm = ({
   selectedDemo,
@@ -23,6 +24,13 @@ const RequestDemoForm = ({
   const [optionDomain, setOptionDomain] = useState('');
   const [domainName, setDomainName] = useState('');
   const [domain2Name, setDomain2Name] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    termsAndConditions: false,
+
+  });
   const { MdWeb } = iconsList;
 
   const renderSelectedDemos = [
@@ -42,35 +50,47 @@ const RequestDemoForm = ({
 
   /** Handle Name change */
   const handleNameChange = (ev) => {
-    dispatch({
-      type: 'UPDATE_USER',
-      payload: {
-        ...state.user,
-        name: ev.target.value,
-      },
-    });
+    // dispatch({
+    //   type: 'UPDATE_USER',
+    //   payload: {
+    //     ...state.user,
+    //     name: ev.target.value,
+    //   },
+    // });
+    setFormData({
+      ...formData,
+      name: ev.target.value,
+    })
   };
 
   /** Handle Phone change */
   const handlePhoneChange = (ev) => {
-    dispatch({
-      type: 'UPDATE_USER',
-      payload: {
-        ...state.user,
-        phone: ev.target.value,
-      },
-    });
+    // dispatch({
+    //   type: 'UPDATE_USER',
+    //   payload: {
+    //     ...state.user,
+    //     phone: ev.target.value,
+    //   },
+    // });
+    setFormData({
+      ...formData,
+      phone: ev.target.value,
+    })
   };
 
   /** Handle Email change */
   const handleEmailChange = (ev) => {
-    dispatch({
-      type: 'UPDATE_USER',
-      payload: {
-        ...state.user,
-        email: ev.target.value,
-      },
-    });
+    // dispatch({
+    //   type: 'UPDATE_USER',
+    //   payload: {
+    //     ...state.user,
+    //     email: ev.target.value,
+    //   },
+    // });
+    setFormData({
+      ...formData,
+      email: ev.target.value,
+    })
   };
 
   const handleOptionDomain = (ev) => setOptionDomain(ev.target.value);
@@ -98,9 +118,9 @@ const RequestDemoForm = ({
     try {
       setLoading(true);
       const response = await ContactFormServices.sendFormToRealtor(
-        state.user?.name,
-        state.user?.email,
-        state.user?.phone,
+        formData?.name,
+        formData?.email,
+        formData?.phone,
         optionDomain === '1' ? 'Si posee' : 'No posee',
         domainName || domain2Name,
         realtorData.email,
@@ -248,10 +268,10 @@ const RequestDemoForm = ({
           id="name"
           name="name"
           maxLength={50}
-          value={state?.user?.name}
+          value={formData?.name}
           onChange={handleNameChange}
           placeholder="Escriba su nombre"
-          readOnly
+        // readOnly
         />
       </div>
 
@@ -268,10 +288,10 @@ const RequestDemoForm = ({
           id="phone"
           name="phone"
           maxLength={9}
-          value={state?.user?.phone}
+          value={formData?.phone}
           onChange={handlePhoneChange}
           placeholder="+569 8765 432"
-          readOnly
+        // readOnly
         />
       </div>
 
@@ -287,10 +307,10 @@ const RequestDemoForm = ({
           type="email"
           id="email"
           name="email"
-          value={state?.user?.email}
+          value={formData?.email}
           onChange={handleEmailChange}
           placeholder="ejemplo@gmail.com"
-          readOnly
+        // readOnly
         />
       </div>
 

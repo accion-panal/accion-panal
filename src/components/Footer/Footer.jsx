@@ -35,11 +35,11 @@ const Footer = () => {
             </div>
             <div className="text-[#6b6b6b]">
               <p>Teléfono</p>
-              <p>+56 9 1234 5678</p>
+              <p>+56 9 49884304</p>
             </div>
             <div className="text-[#6b6b6b]">
               <p>E-mail</p>
-              <p>contacto@panal.cl</p>
+              <p>contacto@accionpanal.cl / contacto@accionpanal.com</p>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ const Footer = () => {
             <ul className="text-md mt-5 text-[#6b6b6b]">
               <li className="my-2">
                 <a
-                  href="#"
+                  href="/nosotros"
                   className="hover:underline underline-offset-4 decoration-orange-500"
                 >
                   Nosotros
@@ -85,7 +85,7 @@ const Footer = () => {
               </li>
               <li className="my-2">
                 <a
-                  href="#"
+                  href="/servicios/panal"
                   className="hover:underline underline-offset-4 decoration-orange-500"
                 >
                   Servicios
@@ -93,7 +93,7 @@ const Footer = () => {
               </li>
               <li className="my-2">
                 <a
-                  href="#"
+                  href="/contacto"
                   className="hover:underline underline-offset-4 decoration-orange-500"
                 >
                   Contáctanos
@@ -101,7 +101,8 @@ const Footer = () => {
               </li>
               <li className="my-2">
                 <a
-                  href="#"
+                  href="https://accion.panal.house/"
+                  target='_blank'
                   className="hover:underline underline-offset-4 decoration-orange-500"
                 >
                   Intranet
