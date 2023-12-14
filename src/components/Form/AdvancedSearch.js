@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
 import { api } from '../../api';
 import { PropertiesContext } from '../../context/properties/PropertiesContext';
 import { SelectsContext } from '../../context/selects/SelectContext';
@@ -10,11 +9,12 @@ import {
 } from '../../constants/consts/selects';
 import { company, paginationTopLimit } from '../../constants/consts/company';
 import Button from '../Button/Button';
+import { useRouter } from 'next/router';
 
-const AdvancedSearch = ({ setProperties }) => {
+const AdvancedSearch = ({ setProperties, page }) => {
   const { contextData } = useContext(PropertiesContext);
   const { contextDataSelects } = useContext(SelectsContext);
-  const { isLoading, setIsLoading, setNotFoundMsg } = contextData;
+  const { isLoading, setIsLoading, setNotFoundMsg, getProperties, setFilterProps, setPage } = contextData;
   const {
     regions,
     communes,
@@ -25,7 +25,8 @@ const AdvancedSearch = ({ setProperties }) => {
     selectedSelects,
     setSelectedSelects,
   } = contextDataSelects;
-  const { pathname } = useLocation();
+  const router = useRouter();
+  const { pathname } = router;
 
   /** Handle Inputs Form */
   const onOperationTypeChange = (ev) =>
@@ -58,8 +59,8 @@ const AdvancedSearch = ({ setProperties }) => {
         selectedRegion.name === 'Metropolitana de Santiago'
           ? 'Santiago'
           : selectedRegion.name === 'Arica y Parinacota'
-          ? 'Arica'
-          : selectedRegion.name,
+            ? 'Arica'
+            : selectedRegion.name,
     });
   };
 
@@ -105,7 +106,7 @@ const AdvancedSearch = ({ setProperties }) => {
       coveredParkingLots: ev.target.value,
     });
 
-  const resetForm = () =>
+  const resetForm = () => {
     setSelectedSelects({
       operationType: '',
       typeOfProperty: '',
@@ -119,6 +120,9 @@ const AdvancedSearch = ({ setProperties }) => {
       bathrooms: '',
       coveredParkingLots: '',
     });
+    setFilterProps('');
+  }
+
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -131,6 +135,8 @@ const AdvancedSearch = ({ setProperties }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     scrollToTop();
+
+    console.log(selectedSelects)
 
     const createUrl = {
       operationType:
@@ -179,30 +185,38 @@ const AdvancedSearch = ({ setProperties }) => {
           : '',
     };
 
-    const url = `properties?page=${1}&limit=${
-      paginationTopLimit.topLimit
-    }&statusId=${company.statusId}&companyId=${company.companyId}${
-      createUrl.operationType
-    }${createUrl.typeOfProperty}${createUrl.installmentType}${
-      createUrl.region
-    }${createUrl.commune}${createUrl.surfaceM2}${createUrl.minPrice}${
-      createUrl.maxPrice
-    }${createUrl.bedrooms}${createUrl.bathrooms}${
-      createUrl.coveredParkingLots
-    }`;
+    /* const url = `properties?page=${1}&limit=${paginationTopLimit.topLimit
+      }&statusId=${company.statusId}&companyId=${company.companyId}${createUrl.operationType
+      }${createUrl.typeOfProperty}${createUrl.installmentType}${createUrl.region
+      }${createUrl.commune}${createUrl.surfaceM2}${createUrl.minPrice}${createUrl.maxPrice
+      }${createUrl.bedrooms}${createUrl.bathrooms}${createUrl.coveredParkingLots
+      }`; */
+    const url = `${createUrl.operationType
+      }${createUrl.typeOfProperty}${createUrl.installmentType}${createUrl.region
+      }${createUrl.commune}${createUrl.surfaceM2}${createUrl.minPrice}${createUrl.maxPrice
+      }${createUrl.bedrooms}${createUrl.bathrooms}${createUrl.coveredParkingLots
+      }`;
 
     try {
       setNotFoundMsg('');
-      setProperties([]);
+      /* setProperties([]); */
       setIsLoading(true);
-      const response = await api.get(url);
-      setProperties(response.data.data);
+      setFilterProps(url);
+
+
+
+      setPage(1);
+      getProperties(1, paginationTopLimit.limit, url)
+
+
+      /* const response = await api.get(url);
+      setProperties(response.data.data); */
       setIsLoading(false);
-      setNotFoundMsg(
+      /* setNotFoundMsg(
         response.data.data.length === 0
           ? 'Lo sentimos, tu busqueda no coincide con nuestros registros'
           : ''
-      );
+      ); */
     } catch (error) {
       console.error(error);
     }

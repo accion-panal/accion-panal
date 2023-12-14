@@ -57,6 +57,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       'primary': '#009245',
+      'primary-opacity': '#00E56C',
       'panal': {
         'cyan': '#1ea498',
         'purple': '#4e2772',

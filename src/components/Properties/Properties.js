@@ -10,7 +10,7 @@ import AdvancedSearch from '../../components/Form/AdvancedSearch';
 import { iconsList } from '../../components/icons';
 // import styles from '../../../../styles/components/OutstandingProject/OutstandingProject.module.css';
 import { truncateStringSmall } from '../../utils/index';
-import { company } from '../../constants/consts/company';
+import { company, paginationTopLimit } from '../../constants/consts/company';
 
 const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
   const { contextData } = useContext(PropertiesContext);
@@ -26,6 +26,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
     handlePageChange,
     isLoading,
     notFoundMsg,
+    getProperties, setFilterProps, setPage
   } = contextData;
   const { RiArrowDownSLine } = iconsList;
   const [showMore, setShowMore] = useState(false);
@@ -56,6 +57,12 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
     (property) => property.highlighted === true
   );
 
+  const resetSearch = () => {
+    setFilterProps('');
+    setPage(1);
+    getProperties(1, paginationTopLimit.limit, '')
+  };
+
   return (
     <React.Fragment>
       <div className="flex relative flex-col w-[100%] max-w-[1460px] mx-auto my-14">
@@ -72,6 +79,15 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
         />
         <div className="flex flex-col-reverse md:flex-row">
           <div className="w-full md:w-4/5 bg-white mb-48">
+            {notFoundMsg ? (
+              <div className="container-message flex flex-col justify-center items-center text-center h-1/2">
+                <span className="flex items-center">{notFoundMsg}</span>
+                <button onClick={resetSearch} className="relative border-2 border-transparent outline-none focus:outline-none h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  text-blue-500 hover:text-blue-600 " type="button">
+                  Restablecer búsqueda
+                </button>
+              </div>
+            ) : ('')}
+
 
             <ul
               className={`${isGrid
@@ -114,7 +130,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                 </span>
               )} */}
             </button>
-            {/* <AdvancedSearch {...{ setProperties }} /> */}
+            <AdvancedSearch {...{ setProperties, page }} />
             {/* {isOpenForm && <AdvancedSearch {...{ setProperties }} />} */}
 
             {/*  <div className="p-5 mb-20">

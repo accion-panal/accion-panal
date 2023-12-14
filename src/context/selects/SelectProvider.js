@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { SelectsContext } from './SelectsContext';
+import { SelectsContext } from '../selects/SelectContext';
 import SelectsServices from '../../services/SelectsServices';
 
 const SelectsProvider = ({ children }) => {
@@ -23,7 +23,7 @@ const SelectsProvider = ({ children }) => {
     bathrooms: '',
     coveredParkingLots: '',
   });
-  const { pathname } = useLocation();
+  /*   const { pathname } = useLocation(); */
 
   const getSelects = async () => {
     const { data } = await SelectsServices.getSelects();
@@ -43,20 +43,8 @@ const SelectsProvider = ({ children }) => {
         type.name !== 'agrícola' &&
         type.name !== 'Terreno En Construccion'
     );
-    setOperationType(
-      pathname === '/soy-inversionista/unidades-nuevas'
-        ? filtredOperationTypeSelects
-        : pathname === '/propiedades'
-        ? data?.operationType
-        : data?.operationType
-    );
-    setTypeOfProperty(
-      pathname === '/soy-inversionista/unidades-nuevas'
-        ? filtredTypeOfPropertiesSelects
-        : pathname === '/propiedades'
-        ? data?.typeOfProperty
-        : data?.typeOfProperty
-    );
+    setOperationType(data?.operationType);
+    setTypeOfProperty(data?.typeOfProperty);
     setRegions(data?.regions);
     setInstallmentType(data?.installment_type);
   };
@@ -69,7 +57,7 @@ const SelectsProvider = ({ children }) => {
   useEffect(() => {
     getSelects();
     getCommunesByStateId(stateId);
-  }, [stateId, pathname]);
+  }, [stateId]);
 
   return (
     <SelectsContext.Provider

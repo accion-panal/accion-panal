@@ -5,16 +5,15 @@ const PropertiesServices = {
   getProperties: async (
     currentPage,
     limit = paginationTopLimit.limit,
-    statusId = company.statusId,
-    companyId = company.companyId
+    filters = ''
   ) => {
     const response = await api.get(
-      `properties?page=${currentPage}&limit=${limit}&statusId=${statusId}&companyId=${companyId}`
+      `properties?page=${currentPage}&limit=${limit}&statusId=${company.statusId}&companyId=${company.companyId}${filters}`
     );
 
     // respuesta para unidades nuevas
     const responseNewUnities = await api.get(
-      `properties?page=${currentPage}&limit=${limit}&statusId=${statusId}&companyId=${companyId}&operationType=venta`
+      `properties?page=${currentPage}&limit=${limit}&statusId=${company.statusId}&companyId=${company.companyId}&operationType=venta`
     );
 
     return {

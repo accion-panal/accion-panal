@@ -19,6 +19,7 @@ const PropertiesProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [notFoundMsg, setNotFoundMsg] = useState('');
   const [sortOrder, setSortOrder] = useState('');
+  const [filterProps, setFilterProps] = useState('');
   // const { pathname } = useRouter();
   const router = useRouter();
 
@@ -40,14 +41,16 @@ const PropertiesProvider = ({ children }) => {
 
   const getProperties = async (
     currentPage,
-    limit = paginationTopLimit.limit
+    limit = paginationTopLimit.limit,
+    filters = filterProps
   ) => {
     try {
       setNotFoundMsg('');
       setIsLoading(true);
       const { data, meta } = await PropertiesServices.getProperties(
         currentPage,
-        limit
+        limit,
+        filters
       );
       setProperties(router.asPath === '/propiedades' ? data : data);
       setHighlightedProperties(data);
@@ -116,6 +119,9 @@ const PropertiesProvider = ({ children }) => {
           handleSortChange,
           sortOrder,
           setSortOrder,
+          getProperties,
+          setFilterProps,
+          setPage
         },
       }}
     >
