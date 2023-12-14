@@ -53,11 +53,11 @@ export const navigationData = [
       },
     ],
   },
-  {
-    id: 4,
-    name: 'Propiedades',
-    href: '/propiedades',
-  },
+  /*   {
+      id: 4,
+      name: 'Propiedades',
+      href: '/propiedades',
+    }, */
   {
     id: 5,
     name: 'Contacto',
