@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/link';
 import { PropertiesContext } from '../../context/properties/PropertiesContext';
 import PropertiesTop from '../../components/Navigation/PropertiesTop';
 import PropertyCard from './components/PropertyCard';
 import Pagination from '../paginations';
 import AdvancedSearch from '../../components/Form/AdvancedSearch';
 // import Spinner from '../../../Spinner/Spinner';
-// import NotFound from '../../../Message/NotFound';
+/* import NotFound from '../../../Message/NotFound'; */
 import { iconsList } from '../../components/icons';
 // import styles from '../../../../styles/components/OutstandingProject/OutstandingProject.module.css';
 import { truncateStringSmall } from '../../utils/index';
@@ -58,7 +58,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
 
   return (
     <React.Fragment>
-      <div className="flex relative flex-col w-[100%]">
+      <div className="flex relative flex-col w-[100%] max-w-[1460px] mx-auto my-14">
         <PropertiesTop
           {...{
             totalItems,
@@ -72,15 +72,12 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
         />
         <div className="flex flex-col-reverse md:flex-row">
           <div className="w-full md:w-4/5 bg-white mb-48">
-            {/* PROPERTIES LIST */}
-            {isLoading && <Spinner />}
-            {notFoundMsg && <NotFound message={notFoundMsg} />}
+
             <ul
-              className={`${
-                isGrid
-                  ? 'grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-2'
-                  : 'flex flex-col gap-3'
-              }`}
+              className={`${isGrid
+                ? 'grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-2'
+                : 'flex flex-col gap-3'
+                }`}
             >
               {properties.map((character) => (
                 <PropertyCard
@@ -90,7 +87,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                 />
               ))}
             </ul>
-            {/* PROPERTIES PAGINATION */}
+
             <div>
               <Pagination
                 currentPage={page}
@@ -99,13 +96,13 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
               />
             </div>
           </div>
-          {/* ADVANCED SEARCH FORM */}
+
           <div className="w-full md:w-1/5 bg-white border ml-0 xl:ml-2">
             <button
               onClick={handleToggleForm}
               className="bg-gray-100 w-full mx-auto p-2 hover:bg-gray-200 border-b"
             >
-              {isOpenForm ? (
+              {/* {isOpenForm ? (
                 <span className="flex items-center justify-center text-sm">
                   <MdOutlineFilterListOff className="pr-1 text-xl" />
                   Ocultar filtros
@@ -115,28 +112,28 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                   <MdOutlineFilterList className="pr-1 text-xl" />
                   Mostrar filtros
                 </span>
-              )}
+              )} */}
             </button>
-            {isOpenForm && <AdvancedSearch {...{ setProperties }} />}
+            {/* <AdvancedSearch {...{ setProperties }} /> */}
+            {/* {isOpenForm && <AdvancedSearch {...{ setProperties }} />} */}
 
-            <div className="p-5 mb-20">
+            {/*  <div className="p-5 mb-20">
               <h3 className="bg-gray-50 p-2 text-gray-800">
                 Proyectos destacados
               </h3>
 
               <ul className="flex w-[100%] flex-wrap relative">
                 {outstandingProperties?.map((propiedad) => (
-                  <Link
+                  <a
                     key={propiedad.id}
-                    to={`/propiedades/${propiedad?.id}?statusId=${company.statusId}&companyId=${company.companyId}`}
-                    className={`${styles.link} relative h-[145px] text-white text-xs w-[45%] sm:w-[47.5%] lg:w-[45%] xl:w-[45%] m-1`}
+                    href={`/propiedades/${propiedad?.id}?statusId=${company.statusId}&companyId=${company.companyId}`}
+                    className={`relative h-[145px] text-white text-xs w-[45%] sm:w-[47.5%] lg:w-[45%] xl:w-[45%] m-1`}
                   >
                     <img
                       src={
                         'https://http2.mlstatic.com/D_NQ_NP_911655-MLC69020961065_042023-O.webp'
                       }
                       alt={`imagen-${propiedad?.title}`}
-                      className={styles.outstandingProject__image}
                       style={{
                         objectFit: 'cover',
                         objectPosition: 'center',
@@ -144,7 +141,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                         width: '100%',
                       }}
                     />
-                    <p className={styles.deptName}>
+                    <p >
                       {truncateStringSmall(
                         propiedad.title || 'Propiedad sin titulo registrado'
                       ) || ''}
@@ -152,7 +149,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                     <span className="bg-primary mt-[40px] absolute p-[1.5px] px-3 -top-[25px] w-auto rounded-full">
                       Cod: {propiedad.id}
                     </span>
-                  </Link>
+                  </a>
                 ))}
               </ul>
 
@@ -163,7 +160,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                     <div className="h-11 w-11 rounded-full bg-white border border-gray-200 text-gray-400 hover:text-white hover:bg-primary cursor-pointer flex items-center justify-center">
                       <RiArrowDownSLine className="text-2xl" />
                     </div>
-                  )}
+                  )} 
                 </button>
                 <button onClick={seeLessProperties} className="relative">
                   {!showMore && propertiesToShow.length >= 10 && (
@@ -174,7 +171,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                 </button>
                 <div className="flex-1 border-b border-gray-200"></div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

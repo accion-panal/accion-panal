@@ -1,9 +1,8 @@
 import React, { useEffect, useContext } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'next/link';
 import { iconsList } from '../icons/index';
 import { paginationTopLimit } from '../../constants/consts/company';
 import { PropertiesContext } from '../../context/properties/PropertiesContext';
-import { useRouter } from 'next/router';
 
 const PropertiesTop = ({
   totalItems,
@@ -16,7 +15,6 @@ const PropertiesTop = ({
   const { contextData } = useContext(PropertiesContext);
   const { sortOrder, handleSortChange } = contextData;
   // const { pathname } = useLocation();
-  const router = useRouter();
   const { BsFillGridFill, FaThList, FaMapMarkerAlt } = iconsList;
 
   return (
@@ -44,9 +42,8 @@ const PropertiesTop = ({
                 setIsGrid(true);
                 setIsList(false);
               }}
-              className={`${
-                isGrid ? 'bg-primary text-white' : 'bg-gray-100 text-gray-500'
-              } mx-1 p-2.5 cursor-pointer `}
+              className={`${isGrid ? 'bg-primary text-white' : 'bg-gray-100 text-gray-500'
+                } mx-1 p-2.5 cursor-pointer `}
             >
               <BsFillGridFill />
             </li>
@@ -55,19 +52,18 @@ const PropertiesTop = ({
                 setIsList(true);
                 setIsGrid(false);
               }}
-              className={`${
-                isList
-                  ? 'bg-primary text-white'
-                  : 'bg-gray-100 cursor-pointer text-gray-500'
-              } mx-1 p-2.5 cursor-pointer`}
+              className={`${isList
+                ? 'bg-primary text-white'
+                : 'bg-gray-100 cursor-pointer text-gray-500'
+                } mx-1 p-2.5 cursor-pointer`}
             >
               <FaThList />
             </li>
-            <li className="mx-1 p-2.5 bg-gray-100 cursor-pointer text-gray-500">
-              <Link to="/propiedades/propiedades-en-mapa">
+            {/* <li className="mx-1 p-2.5 bg-gray-100 cursor-pointer text-gray-500">
+              <Link href="/propiedades/propiedades-en-mapa">
                 <FaMapMarkerAlt />
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

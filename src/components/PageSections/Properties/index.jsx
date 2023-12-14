@@ -7,7 +7,6 @@ const Properties = () => {
     const [isList, setIsList] = useState(false);
     return (
         <div id='propiedades-section'>
-            <h2 className='mt-20'>Mis propiedades</h2>
             <PropertiesProvider>
                 <PropertiesComp  {...{ isGrid, isList, setIsGrid, setIsList }} />
             </PropertiesProvider>
