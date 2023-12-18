@@ -23,7 +23,7 @@ const PropertiesProvider = ({ children }) => {
   // const { pathname } = useRouter();
   const router = useRouter();
 
-  console.log(router);
+  /* console.log(router); */
 
   const handleSortChange = (event) => {
     setSortOrder(event.target.value);

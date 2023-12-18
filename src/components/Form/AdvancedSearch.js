@@ -136,7 +136,7 @@ const AdvancedSearch = ({ setProperties, page }) => {
     event.preventDefault();
     scrollToTop();
 
-    console.log(selectedSelects)
+    /* console.log(selectedSelects) */
 
     const createUrl = {
       operationType:
