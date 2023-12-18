@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import mapboxgl from '!mapbox-gl';
-
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2VyZ2lvdmVyYWhlcm5hbmRlemJpZGF0YSIsImEiOiJjbDMwZHc4cmswMDdqM2NydmIzYWF0cGl4In0.hsYQFPebleAB4j6mRckMzQ';
+import { mapbox } from '@/api';
+mapboxgl.accessToken = mapbox;
 
 const MapBoxContainer = ({ LngLat }) => {
   // Si LngLat no está definido o es una cadena vacía, no hacer nada
