@@ -52,9 +52,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <button
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
-          className={`${
-            currentPage === 1 ? 'bg-gray-100 text-gray-400' : 'bg-gray-200'
-          } p-3 border rounded-l-lg`}
+          className={`${currentPage === 1 ? 'bg-gray-100 text-gray-400' : 'bg-gray-200'
+            } p-3 border rounded-l-lg`}
         >
           Volver
         </button>
@@ -62,11 +61,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         {getPageNumbers().map((pageNumber, index) => (
           <button
             key={index}
-            className={`${
-              currentPage === pageNumber || pageNumber === '...'
+            className={`${currentPage === pageNumber || pageNumber === '...'
                 ? 'bg-primary hover:bg-primary-opacity text-white active'
                 : 'bg-white text-black'
-            } p-3 border`}
+              } p-3 border`}
             disabled={currentPage === pageNumber || pageNumber === '...'}
             style={{
               backgroundColor: pageNumber === currentPage ? 'bg-primary' : '',
@@ -82,11 +80,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <button
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
-          className={`${
-            currentPage === totalPages
+          className={`${currentPage === totalPages
               ? 'bg-gray-100 text-gray-400'
               : 'bg-gray-200'
-          } p-3 border rounded-r-lg`}
+            } p-3 border rounded-r-lg`}
         >
           Siguiente
         </button>

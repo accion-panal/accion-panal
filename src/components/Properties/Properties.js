@@ -78,7 +78,7 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
           }}
         />
         <div className="flex flex-col-reverse md:flex-row">
-          <div className="w-full md:w-4/5 bg-white mb-48">
+          <div className="w-full md:w-4/5 mb-48">
             {notFoundMsg ? (
               <div className="container-message flex flex-col justify-center items-center text-center h-1/2">
                 <span className="flex items-center">{notFoundMsg}</span>
@@ -114,11 +114,11 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
           </div>
 
           <div className="w-full md:w-1/5 bg-white border ml-0 xl:ml-2">
-            <button
+            {/* <button
               onClick={handleToggleForm}
               className="bg-gray-100 w-full mx-auto p-2 hover:bg-gray-200 border-b"
             >
-              {/* {isOpenForm ? (
+              {isOpenForm ? (
                 <span className="flex items-center justify-center text-sm">
                   <MdOutlineFilterListOff className="pr-1 text-xl" />
                   Ocultar filtros
@@ -128,8 +128,8 @@ const PropertiesComp = ({ isList, setIsList, isGrid, setIsGrid }) => {
                   <MdOutlineFilterList className="pr-1 text-xl" />
                   Mostrar filtros
                 </span>
-              )} */}
-            </button>
+              )}
+            </button> */}
             <AdvancedSearch {...{ setProperties, page }} />
             {/* {isOpenForm && <AdvancedSearch {...{ setProperties }} />} */}
 
