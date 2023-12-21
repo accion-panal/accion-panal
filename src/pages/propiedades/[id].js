@@ -6,9 +6,9 @@ import PropertiesDetails from '@/components/Properties/PropertiesDetails';
 const PropiedadesId = () => {
   return (
     <>
-      <HeadPage>
+      {/* <HeadPage>
         <title>Acción Panal | Propiedades</title>
-      </HeadPage>
+      </HeadPage> */}
       <LayoutPage>
         <PropertiesDetails />
       </LayoutPage>
