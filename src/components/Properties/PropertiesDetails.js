@@ -42,6 +42,7 @@ const PropertiesDetails = () => {
         titleMain={`Acción Panal | Propiedad: ${dataProperty?.id}`}
         descriptionMain={'Propiedad del banco de canje de Acción Panal'}
       />
+
       <div className="flex relative flex-col w-[100%] max-w-[1400px] mx-auto my-14">
         <div className={`text-center mx-auto w-[95%] md:w-[90%] xl:w-[80%] mb-5`}>
           <h1
